@@ -1,0 +1,19 @@
+name: Continuous-Integeration
+
+# used to specfiy the event that will trigger the workflow
+# events could be anything such as push or pull request and so on. There can be a array of events
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello World!!!
+    -name: Run a multi-line script
+      run: |
+        echo Add another actions to build
+        echo test, and deploy your project.
